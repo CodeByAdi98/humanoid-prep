@@ -37,6 +37,15 @@ else pushes.
 private half is the only thing that opens it. GitHub challenges my laptop to prove it
 holds the private key; the secret never crosses the network.
 
+**Creating a branch copies nothing.** After `git switch -c week-01-git`, `git log
+--oneline` showed one commit with three labels on it: `week-01-git`, `main`, and
+`origin/main`. All pointing at the same place. The branch was a new 40-byte file, not a
+copy of anything. They only separated once I committed.
+
+**Committing sends nothing anywhere.** I looked for `git-commands.md` on GitHub and it
+wasn't there — because it was committed to a local branch I'd never pushed. Git writes to
+my machine; only `push` crosses the network.
+
 ## What broke, and how I fixed it
 
 **Detached HEAD stranded `main`.** In the first sandbox level I ran `git checkout C1`,
@@ -62,6 +71,11 @@ it just walked HEAD forward to the target, undoing a correct step I'd taken earl
 isn't the clue. The reliable rule: `HEAD` and `o/main` exist only on my machine — GitHub
 keeps no record of where I'm standing, or of my memory of its state. The drawing
 containing those labels is always the local one.
+
+**`git revert HEAD^` cancelled the wrong commit.** Revert takes the commit to *cancel*,
+not a destination to move to. `HEAD^` is the parent — one too far back. Correct form for
+cancelling the current commit is `git revert HEAD`. Reset takes a destination, revert
+takes a victim; they read similarly and mean opposite things.
 
 ## Open questions
 
