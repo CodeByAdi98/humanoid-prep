@@ -32,6 +32,8 @@ prove nothing.
 - `logs/` — weekly write-ups. What I built, what I learned, what broke and how I fixed it.
 - `setup/` — machine setup runbooks. Written after doing each setup once, so the next
   machine takes minutes instead of hours.
+- `reference/` — command references and cheat sheets, written in my own words as I learn
+  them.
 
 ## Principles
 
