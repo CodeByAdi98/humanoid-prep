@@ -85,6 +85,8 @@ takes a victim; they read similarly and mean opposite things.
   `log/` folders that shouldn't be committed.
 - `git stash` — for parking uncommitted work when switching branches. Learn it when it
   bites.
+- Whether `git switch` fully replaces `checkout` in practice, or whether older tutorials
+  will keep pushing me back to `checkout`.
 - Reset's three modes (`--soft`, `--mixed`, `--hard`) and exactly what each does to the
   working tree, staging area, and repository. Read the table properly.
 
