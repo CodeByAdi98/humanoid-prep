@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Editor
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+
+# ROS 2 (from week 4)
+build/
+install/
+log/
