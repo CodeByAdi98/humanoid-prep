@@ -3,4 +3,10 @@ arm_joints = {"shoulder", "elbow", "wrist"}
 position = (1.23, -2.54, 1.26)
 
 for joint in joints:
-    print(joint, joints[joint])
+    if joint in arm_joints:
+        print(f"{joint:<12}{joints[joint]:>7.2f}  arm")
+    else:
+        print(f"{joint:<12}{joints[joint]:>7.2f}  -")
+
+x, y, z = position
+print(f"position: ({x:.2f}, {y:.2f}, {z:.2f})")
