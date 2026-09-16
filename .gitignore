@@ -15,4 +15,5 @@ venv/
 # ROS 2 (from week 4)
 build/
 install/
-log/
+log/readout*.txt
+out.txt
